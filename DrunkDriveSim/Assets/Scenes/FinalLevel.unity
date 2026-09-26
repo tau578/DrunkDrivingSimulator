@@ -180,11 +180,58 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7385d684ed2474546a06fe9ef2bdbc39, type: 3}
+--- !u!1 &138147626 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3126275437518692267, guid: a4809639a4ecbd74198726fccbbf6da1, type: 3}
+  m_PrefabInstance: {fileID: 1515859368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &167199270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6875495900466150691, guid: a4809639a4ecbd74198726fccbbf6da1, type: 3}
+  m_PrefabInstance: {fileID: 1515859368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &250877970 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4694637762075471163, guid: d66f69fe97c4bd54abe9ed57a4271208, type: 3}
   m_PrefabInstance: {fileID: 1152790782}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &250877971
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250877970}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.4618444, y: 1, z: 2.6091583}
+  m_Center: {x: -0.035347223, y: 0, z: 0.8045789}
+--- !u!114 &250877976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250877970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a75d0cee1f20399469a14f8f42306854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHP
+  hp: 4
+  glass1: {fileID: 167199270}
+  glass2: {fileID: 1902114539}
+  glass3: {fileID: 138147626}
 --- !u!1 &264597192
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,10 +500,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9008452270341271263, guid: d66f69fe97c4bd54abe9ed57a4271208, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4694637762075471163, guid: d66f69fe97c4bd54abe9ed57a4271208, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 250877971}
+    - targetCorrespondingSourceObject: {fileID: 4694637762075471163, guid: d66f69fe97c4bd54abe9ed57a4271208, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 250877976}
   m_SourcePrefab: {fileID: 100100000, guid: d66f69fe97c4bd54abe9ed57a4271208, type: 3}
 --- !u!1 &1417746727
 GameObject:
@@ -489,8 +543,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnScript
   obstacles:
   - {fileID: 7966258860839407976, guid: b14c25934751f4d469880a7b95e0c679, type: 3}
-  - {fileID: 7966258860839407976, guid: 3395aa46f4612b54db5e8bfcb4bd2890, type: 3}
-  - {fileID: 7966258860839407976, guid: 095113124ac1e6046ad707b6e04a4acb, type: 3}
+  - {fileID: 7966258860839407976, guid: 3e79b01cfd2b5f6408ee00e2616edc27, type: 3}
+  - {fileID: 7966258860839407976, guid: 8c56bd20320187143b9eb946f075905d, type: 3}
+  - {fileID: 7966258860839407976, guid: 4e78e4eef8bce70429ba5d13d2958572, type: 3}
+  - {fileID: 7966258860839407976, guid: 65f0876d81ed99146a693e10ab7e00ef, type: 3}
   score: {fileID: 1515859369}
   rend: {fileID: 607664368}
 --- !u!4 &1417746729
@@ -812,6 +868,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62712c385698da040a26a29ea61ae70a, type: 3}
+--- !u!1 &1902114539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2124325559658172352, guid: a4809639a4ecbd74198726fccbbf6da1, type: 3}
+  m_PrefabInstance: {fileID: 1515859368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1955392330
 PrefabInstance:
   m_ObjectHideFlags: 0
