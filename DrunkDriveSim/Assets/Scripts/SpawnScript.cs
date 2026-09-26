@@ -11,12 +11,13 @@ public static int maxObstacle = 20;
 public static float playerSpeed = 4;
 public List<GameObject> obstacles;
 public TextMeshProUGUI score;
-public float points;
+public static float points;
     void Awake()
     {
         maxObstacle = 20;
         playerSpeed = 4;
         obstacleCount = 0;
+        points = 0;
         StartCoroutine(Suicide(Random.Range(1f, 1.5f)));
     }
     void Update()
@@ -37,7 +38,7 @@ public float points;
         {
             int currentPlanetInt = Random.Range(0, obstacles.Count);
             GameObject currentObstacle = obstacles[currentPlanetInt];
-            var position = new Vector3(-8, 1, Random.Range(-4, 2));
+            var position = new Vector3(-8, 0.3f, Random.Range(-4, 2));
             Instantiate(currentObstacle, position, transform.rotation);
             obstacleCount += 1;
             StartCoroutine(Suicide(Random.Range(1f, 5f)));
