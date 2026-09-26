@@ -2,20 +2,31 @@ using UnityEngine;
 using System.Collections;
 using Unity.VisualScripting;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine.UI;
 public class SpawnScript : MonoBehaviour
 {
 [SerializeField] public static int obstacleCount = 0;
 public static int maxObstacle = 20;
-public static float playerSpeed;
+public static float playerSpeed = 4;
 public List<GameObject> obstacles;
-
+public TextMeshProUGUI score;
+public float points;
     void Awake()
     {
+        maxObstacle = 20;
+        playerSpeed = 4;
+        obstacleCount = 0;
         StartCoroutine(Suicide(Random.Range(1f, 1.5f)));
     }
     void Update()
     {
-    playerSpeed += 0.001f;
+        points += Time.deltaTime;   
+        score.text = string.Format("{00}", points);
+        if(playerSpeed < 10)
+        {
+            playerSpeed += 0.01f;
+        }
     }
 
      IEnumerator Suicide(float delay)
