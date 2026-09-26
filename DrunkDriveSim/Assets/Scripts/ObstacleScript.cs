@@ -5,9 +5,11 @@ public class ObstacleScript : MonoBehaviour
     public Rigidbody rb;
     public float xspeed;
 
+
     void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody>();
+        gameObject.transform.localScale -= new Vector3(0.1f, 0.1f, 0.1f);
     }
     public void OnTriggerEnter(Collider other)
     {
@@ -20,6 +22,7 @@ public class ObstacleScript : MonoBehaviour
 
     void Update()
     {
+    gameObject.transform.localScale += new Vector3(0.001f, 0.001f, 0.001f);    
     rb.linearVelocity = transform.forward * SpawnScript.playerSpeed;
     }
 }
