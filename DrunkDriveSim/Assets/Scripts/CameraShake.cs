@@ -9,6 +9,9 @@ public class CameraShake : MonoBehaviour
     public float basePosY = 1;
     public float basePosZ = 0.36f;
 
+    public float yPos = 1;
+    public float xPos;
+
     public bool isShake = false;
 
     void Update()
@@ -17,8 +20,17 @@ public class CameraShake : MonoBehaviour
         {
             transform.position = new Vector3(0f, 1f, 0.36f);
         }*/
-
+        
         transform.position = new Vector3(target.transform.position.x, 1f, 0.36f);
+        /*float increm = 0.1f;
+        if(yPos < 1.1f)
+        {
+            yPos += increm * Time.deltaTime;
+        }
+        if(yPos > 0.9f)
+        {
+            yPos -= increm * Time.deltaTime;
+        }*/
     }
     /*void OnTriggerEnter(Collider collider)
     {
@@ -31,6 +43,24 @@ public class CameraShake : MonoBehaviour
     public void StartShake(float duration, float magnitude)
     {
         StartCoroutine(CamShake(duration, magnitude));
+    }
+    public void ConstantShake()
+    {
+        /*xPos = Random.Range(target.transform.position.x - 0.05f, target.transform.position.x + 0.05f) * 0.5f;
+        yPos = Random.Range(1 - 0.05f, 1 + 0.05f) * 0.2f;*/
+        transform.position = new Vector3(target.transform.position.x, yPos, 0.36f);
+        float increm = 0.1f;
+        if(yPos <= 1.1f)
+        {
+            yPos += increm * Time.deltaTime;
+            return;
+        }
+        if(yPos >= 0.9f)
+        {
+            yPos -= increm * Time.deltaTime;
+            return;
+        }
+        
     }
     public IEnumerator CamShake(float duration, float magnitude)
     {
