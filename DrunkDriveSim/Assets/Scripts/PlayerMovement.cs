@@ -13,11 +13,16 @@ public class PlayerMovement : MonoBehaviour
     public float camRot;
     public float rotIncrement = 0.1f;
     public CharacterController controller;
+    public CameraShake camShakeScript;
 
     static float larpValue = 0.1f;
 
     public GameObject cam;
-    // Update is called once per frame
+    
+    void Start()
+    {
+        camShakeScript = camShakeScript.GetComponent<CameraShake>();
+    }
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -26,6 +31,13 @@ public class PlayerMovement : MonoBehaviour
         if(larpValue > 1f)
         {
             larpValue = 0.1f;
+        }
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Border")
+        {
+            camShakeScript.StartShake(0.2f, 1f);
         }
     }
     void MovePlayer()
