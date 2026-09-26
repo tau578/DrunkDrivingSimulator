@@ -1,46 +1,53 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class PlayerHP : MonoBehaviour
 {
-public int hp = 4;
-public GameObject glass1, glass2, glass3;
-public RawImage sprite;
+    public int hp = 4;
+    public GameObject glass1, glass2, glass3;
+    public RawImage sprite;
+
+    public GameObject blood;
+    public Animator anim;
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy"))
         {
-        hp -= 1;
-        SpawnScript.playerSpeed = 1;
-        StartCoroutine(Invulnerability());
+            hp -= 1;
+            SpawnScript.playerSpeed = 1;
+            StartCoroutine(Invulnerability());
         }
-        if(other.CompareTag("Victim"))
+        if (other.CompareTag("Victim"))
         {
-        SpawnScript.points += 20;
+            SpawnScript.points += 20;
+            StartCoroutine(BloodSplat());
+
         }
     }
 
     void Update()
     {
-        if(hp == 0)
+        if (hp == 0)
         {
             Time.timeScale = 0;
         }
-        if(hp == 3)
+        if (hp == 3)
         {
             glass1.SetActive(true);
             glass2.SetActive(false);
             glass3.SetActive(false);
         }
-        if(hp == 2)
+        if (hp == 2)
         {
             glass1.SetActive(false);
             glass2.SetActive(true);
             glass3.SetActive(false);
         }
-        if(hp == 1)
+        if (hp == 1)
         {
             glass1.SetActive(false);
             glass2.SetActive(false);
@@ -51,10 +58,18 @@ public RawImage sprite;
     private IEnumerator Invulnerability()
     {
         Physics2D.IgnoreLayerCollision(0, 1, true);
-        for(int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++)
         {
             yield return new WaitForSeconds(0.3f);
         }
         Physics2D.IgnoreLayerCollision(0, 1, false);
+    }
+
+    public IEnumerator BloodSplat()
+    {
+        blood.SetActive(true);
+        anim.Play("BloodExplosion");
+        yield return new WaitForSeconds(0.25f);
+        blood.SetActive(false);
     }
 }
