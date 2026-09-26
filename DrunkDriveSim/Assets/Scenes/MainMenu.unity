@@ -119,6 +119,30 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &128151554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1731936780981291607, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
+  m_PrefabInstance: {fileID: 7057213394505302221}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &128151556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128151554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86f469aeffb0034cb1987327fdcedb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DrunkTitleSway
+  maxRotation: 4
+  rotationSpeed: 1.2
+  horizontalAmount: 8
+  verticalAmount: 5
+  moveSpeed: 0.8
+  secondaryRotationAmount: 1.5
+  secondarySpeed: 0.45
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +272,6 @@ MonoBehaviour:
   m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
-  m_Version: 2
   m_TaaSettings:
     m_Quality: 3
     m_FrameInfluence: 0.1
@@ -256,6 +279,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,14 +306,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
@@ -366,17 +390,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 3
   m_UsePipelineSettings: 1
   m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_RenderingLayers: 1
   m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_ShadowRenderingLayers: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1001 &507328769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -487,6 +517,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1031230167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4152928353645378031, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
+  m_PrefabInstance: {fileID: 7057213394505302221}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1031230169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031230167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86f469aeffb0034cb1987327fdcedb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DrunkTitleSway
+  maxRotation: 4
+  rotationSpeed: 1.2
+  horizontalAmount: 8
+  verticalAmount: 5
+  moveSpeed: 0.8
+  secondaryRotationAmount: 1.5
+  secondarySpeed: 0.45
 --- !u!114 &1181849185 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2581921897228067150, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
@@ -498,6 +552,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241a06d84c5df9f4d8649c724a0310cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1291379603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6331118237115721937, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
+  m_PrefabInstance: {fileID: 7057213394505302221}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1291379605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291379603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86f469aeffb0034cb1987327fdcedb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DrunkTitleSway
+  maxRotation: 4
+  rotationSpeed: 1.2
+  horizontalAmount: 8
+  verticalAmount: 5
+  moveSpeed: 0.8
+  secondaryRotationAmount: 1.5
+  secondarySpeed: 0.45
+--- !u!1 &1748234927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2360276291736920695, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
+  m_PrefabInstance: {fileID: 7057213394505302221}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1748234929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748234927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86f469aeffb0034cb1987327fdcedb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DrunkTitleSway
+  maxRotation: 4
+  rotationSpeed: 1.2
+  horizontalAmount: 8
+  verticalAmount: 5
+  moveSpeed: 0.8
+  secondaryRotationAmount: 1.5
+  secondarySpeed: 0.45
 --- !u!1001 &3115015291327057013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -571,6 +673,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: onCloseCreditsButtonClick
       objectReference: {fileID: 0}
+    - target: {fileID: 550837144220461471, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
+      propertyPath: m_text
+      value: Eeek any beer to start
+      objectReference: {fileID: 0}
     - target: {fileID: 884655014144736729, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -586,6 +692,10 @@ PrefabInstance:
     - target: {fileID: 1995398769575463327, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: onCloseOptionsButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2360276291736920695, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3325526269507189400, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -606,6 +716,10 @@ PrefabInstance:
     - target: {fileID: 3526623423435615191, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnFullscreenToggleChanged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619269990461642432, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
+      propertyPath: m_text
+      value: Drunk drive simulator
       objectReference: {fileID: 0}
     - target: {fileID: 4425902644470227951, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
       propertyPath: m_AnchorMax.y
@@ -654,6 +768,10 @@ PrefabInstance:
     - target: {fileID: 6441179900325625006, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: onPlayButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522216637497468505, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
+      propertyPath: m_text
+      value: Drink drive simulator
       objectReference: {fileID: 0}
     - target: {fileID: 8328711541586553298, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
       propertyPath: m_Pivot.x
@@ -738,7 +856,19 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2360276291736920695, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1748234929}
+    - targetCorrespondingSourceObject: {fileID: 4152928353645378031, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1031230169}
+    - targetCorrespondingSourceObject: {fileID: 6331118237115721937, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1291379605}
+    - targetCorrespondingSourceObject: {fileID: 1731936780981291607, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 128151556}
   m_SourcePrefab: {fileID: 100100000, guid: 10d01240acfa80a43a4156c2c78c1063, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
