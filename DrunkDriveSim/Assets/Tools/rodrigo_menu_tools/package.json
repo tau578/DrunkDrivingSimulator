@@ -1,0 +1,11 @@
+{
+    "name": "MenuTemplates",
+    "version": "1.0.0",
+    "displayName": "Main_and_Pause_Menus",
+    "description": "A basic main menu and pause menu implementation for a game.",
+    "unity": "6.0.0",
+    "author": {
+        "name": "Rodrigo López Moreira",
+    }
+
+}
