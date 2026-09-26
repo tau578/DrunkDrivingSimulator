@@ -22,7 +22,7 @@ public class ObstacleScript : MonoBehaviour
 
     void Update()
     {
-    gameObject.transform.localScale += new Vector3(0.001f, 0.001f, 0.001f);    
+    gameObject.transform.localScale += new Vector3(0.0001f, 0.0001f, 0.0001f);    
     rb.linearVelocity = transform.forward * SpawnScript.playerSpeed;
     }
 }
