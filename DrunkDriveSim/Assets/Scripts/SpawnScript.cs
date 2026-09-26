@@ -1,9 +1,7 @@
 using UnityEngine;
 using System.Collections;
-using Unity.VisualScripting;
 using System.Collections.Generic;
 using TMPro;
-using UnityEngine.UI;
 public class SpawnScript : MonoBehaviour
 {
 [SerializeField] public static int obstacleCount = 0;
@@ -38,7 +36,7 @@ public static float points;
         {
             int currentPlanetInt = Random.Range(0, obstacles.Count);
             GameObject currentObstacle = obstacles[currentPlanetInt];
-            var position = new Vector3(-8, 0.3f, Random.Range(-4, 2));
+            var position = new Vector3(Random.Range(-7, 7), 0.3f, 70);
             Instantiate(currentObstacle, position, transform.rotation);
             obstacleCount += 1;
             StartCoroutine(Suicide(Random.Range(1f, 5f)));

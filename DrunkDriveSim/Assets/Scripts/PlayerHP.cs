@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerHP : MonoBehaviour
@@ -18,5 +19,13 @@ public int hp;
         SpawnScript.points += 20;
         }
 
+    }
+
+    void Update()
+    {
+        if(hp == 0)
+        {
+            Time.timeScale = 0;
+        }
     }
 }
