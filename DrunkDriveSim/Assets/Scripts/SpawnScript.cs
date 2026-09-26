@@ -11,6 +11,8 @@ public class SpawnScript : MonoBehaviour
     public TextMeshProUGUI score;
     public static float points;
 
+    public Renderer rend;
+
     void Awake()
     {
         maxObstacle = 20;
@@ -18,6 +20,7 @@ public class SpawnScript : MonoBehaviour
         obstacleCount = 0;
         points = 0;
         StartCoroutine(Suicide(Random.Range(1f, 1.5f)));
+        rend = rend.GetComponent<Renderer>();
     }
 
     void Update()
@@ -27,6 +30,12 @@ public class SpawnScript : MonoBehaviour
         if (playerSpeed < 10)
         {
             playerSpeed += 0.01f;
+            float offset = SpawnScript.playerSpeed * 0.1f;
+            rend.material.mainTextureOffset = new Vector2(-offset, 0f);
+            if(offset <= -1f)
+            {
+                offset = 0;
+            }
         }
     }
 
