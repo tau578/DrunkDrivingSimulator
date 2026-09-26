@@ -232,6 +232,7 @@ MonoBehaviour:
   glass1: {fileID: 167199270}
   glass2: {fileID: 1902114539}
   glass3: {fileID: 138147626}
+  sprite: {fileID: 1886763247}
 --- !u!1 &264597192
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,8 +280,8 @@ Transform:
   m_GameObject: {fileID: 264597192}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -7.4137, y: -0.25341, z: -6.97}
-  m_LocalScale: {x: 1, y: 2.4676, z: 3.6734}
+  m_LocalPosition: {x: -14.802, y: -0.25341, z: -6.97}
+  m_LocalScale: {x: 1, y: 2.4676, z: 7.785036}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -460,6 +461,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4694637762075471163, guid: d66f69fe97c4bd54abe9ed57a4271208, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8013858100381957749, guid: d66f69fe97c4bd54abe9ed57a4271208, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.72967
@@ -547,6 +552,8 @@ MonoBehaviour:
   - {fileID: 7966258860839407976, guid: 8c56bd20320187143b9eb946f075905d, type: 3}
   - {fileID: 7966258860839407976, guid: 4e78e4eef8bce70429ba5d13d2958572, type: 3}
   - {fileID: 7966258860839407976, guid: 65f0876d81ed99146a693e10ab7e00ef, type: 3}
+  - {fileID: 7966258860839407976, guid: 3e79b01cfd2b5f6408ee00e2616edc27, type: 3}
+  - {fileID: 7966258860839407976, guid: 3e79b01cfd2b5f6408ee00e2616edc27, type: 3}
   score: {fileID: 1515859369}
   rend: {fileID: 607664368}
 --- !u!4 &1417746729
@@ -811,6 +818,17 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!114 &1886763247 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2720043405863777040, guid: a4809639a4ecbd74198726fccbbf6da1, type: 3}
+  m_PrefabInstance: {fileID: 1515859368}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
 --- !u!1001 &1892239472
 PrefabInstance:
   m_ObjectHideFlags: 0

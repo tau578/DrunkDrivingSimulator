@@ -1,11 +1,12 @@
-using UnityEditor;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHP : MonoBehaviour
 {
 public int hp = 4;
 public GameObject glass1, glass2, glass3;
-
+public RawImage sprite;
 
     void OnTriggerEnter(Collider other)
     {
@@ -13,6 +14,7 @@ public GameObject glass1, glass2, glass3;
         {
         hp -= 1;
         SpawnScript.playerSpeed = 1;
+        StartCoroutine(Invulnerability());
         }
         if(other.CompareTag("Victim"))
         {
@@ -44,5 +46,15 @@ public GameObject glass1, glass2, glass3;
             glass2.SetActive(false);
             glass3.SetActive(true);
         }
+    }
+
+    private IEnumerator Invulnerability()
+    {
+        Physics2D.IgnoreLayerCollision(0, 1, true);
+        for(int i = 0; i < 3; i++)
+        {
+            yield return new WaitForSeconds(0.3f);
+        }
+        Physics2D.IgnoreLayerCollision(0, 1, false);
     }
 }
