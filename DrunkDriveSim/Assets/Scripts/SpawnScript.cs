@@ -25,14 +25,14 @@ public class SpawnScript : MonoBehaviour
 
     void Update()
     {
+        float offset = SpawnScript.playerSpeed * 0.01f;
+        rend.material.mainTextureOffset = new Vector2(Time.realtimeSinceStartup * offset, 0f);
         points += Time.deltaTime;
         score.text = string.Format("{00}", points);
         if (playerSpeed < 10)
         {
             playerSpeed += 0.01f;
-            float offset = SpawnScript.playerSpeed * 0.1f;
-            rend.material.mainTextureOffset = new Vector2(-offset, 0f);
-            if(offset <= -1f)
+            if (offset <= -1f)
             {
                 offset = 0;
             }
