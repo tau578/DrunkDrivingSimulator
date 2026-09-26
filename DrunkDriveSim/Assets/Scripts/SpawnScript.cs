@@ -47,7 +47,7 @@ public class SpawnScript : MonoBehaviour
         {
             int currentPlanetInt = Random.Range(0, obstacles.Count);
             GameObject currentObstacle = obstacles[currentPlanetInt];
-            var position = new Vector3(Random.Range(-7, 7), 0.3f, 70);
+            var position = new Vector3(Random.Range(-7, 7), -0.5f, 70);
             Instantiate(currentObstacle, position, transform.rotation);
             obstacleCount += 1;
             StartCoroutine(Suicide(Random.Range(1f, 5f)));

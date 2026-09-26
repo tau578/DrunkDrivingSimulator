@@ -1660,8 +1660,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnScript
   obstacles:
   - {fileID: 7966258860839407976, guid: b14c25934751f4d469880a7b95e0c679, type: 3}
-  - {fileID: 7966258860839407976, guid: 3395aa46f4612b54db5e8bfcb4bd2890, type: 3}
-  - {fileID: 7966258860839407976, guid: 095113124ac1e6046ad707b6e04a4acb, type: 3}
+  - {fileID: 7966258860839407976, guid: 3e79b01cfd2b5f6408ee00e2616edc27, type: 3}
+  - {fileID: 7966258860839407976, guid: 8c56bd20320187143b9eb946f075905d, type: 3}
+  - {fileID: 7966258860839407976, guid: 4e78e4eef8bce70429ba5d13d2958572, type: 3}
+  - {fileID: 7966258860839407976, guid: 65f0876d81ed99146a693e10ab7e00ef, type: 3}
   score: {fileID: 1515859369}
   rend: {fileID: 607664368}
 --- !u!4 &1417746729
