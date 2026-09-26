@@ -53,7 +53,7 @@ public RawImage sprite;
         Physics2D.IgnoreLayerCollision(0, 1, true);
         for(int i = 0; i < 3; i++)
         {
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.5f);
         }
         Physics2D.IgnoreLayerCollision(0, 1, false);
     }
