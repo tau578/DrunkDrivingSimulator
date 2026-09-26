@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1172921327218902970}
   - component: {fileID: 5987116158917489730}
   - component: {fileID: 4739429496448395409}
+  - component: {fileID: 7341820917357101101}
   m_Layer: 5
   m_Name: Canvas_DriverHUD
   m_TagString: Untagged
@@ -55,9 +56,9 @@ Canvas:
   m_GameObject: {fileID: 344055427951460808}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 0.31
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -109,6 +110,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7341820917357101101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344055427951460808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e197bc491f42f096ed5d9f051c4414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 0}
 --- !u!1 &744857489087165578
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +379,7 @@ RectTransform:
   m_GameObject: {fileID: 2168119563046939653}
   m_LocalRotation: {x: -0.082232796, y: -0, z: -0, w: 0.99661314}
   m_LocalPosition: {x: 0, y: 0, z: -0.0000089106}
-  m_LocalScale: {x: 7.837387, y: 6.1075344, z: 8.804668}
+  m_LocalScale: {x: 7.837387, y: 6.963811, z: 8.804668}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1092637760899223323}
@@ -746,7 +760,7 @@ RectTransform:
   m_GameObject: {fileID: 5922877432998105733}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2121347, y: 3.8362513, z: 1.2121347}
+  m_LocalScale: {x: 3.6819756, y: 4.0276804, z: 1.2121347}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1092637760899223323}
