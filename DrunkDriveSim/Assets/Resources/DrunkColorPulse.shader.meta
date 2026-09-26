@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 63f5ff40e06655444a09031f94a54e59
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 341652
+  packageName: Drunk Color Pulse (Post-Processing Effect)
+  packageVersion: 1.0.0
+  assetPath: Assets/Resources/DrunkColorPulse.shader
+  uploadId: 830100
