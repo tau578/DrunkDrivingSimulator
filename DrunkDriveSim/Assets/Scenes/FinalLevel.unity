@@ -340,7 +340,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: f7ad68784f3a58c4a979ec02046a5bba, type: 3}
+  m_Resource: {fileID: 8300000, guid: 0c4bf8cf723437f4285474d7b0cad778, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -516,6 +516,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4694637762075471163, guid: d66f69fe97c4bd54abe9ed57a4271208, type: 3}
       insertIndex: -1
       addedObject: {fileID: 250877976}
+    - targetCorrespondingSourceObject: {fileID: 4694637762075471163, guid: d66f69fe97c4bd54abe9ed57a4271208, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2100000101}
   m_SourcePrefab: {fileID: 100100000, guid: d66f69fe97c4bd54abe9ed57a4271208, type: 3}
 --- !u!1 &1417746727
 GameObject:
@@ -948,6 +951,42 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acd608f06937a3e448dc894f979ae414, type: 3}
+--- !u!224 &2100000100 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1092637760899223323, guid: a4809639a4ecbd74198726fccbbf6da1, type: 3}
+  m_PrefabInstance: {fileID: 1515859368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2100000101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250877970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 271ab63cc6e648e0a61c298432c498aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BeerCanStack
+  hud: {fileID: 2100000100}
+  canTextures:
+  - {fileID: 2800000, guid: c1a48643fabbb7c4bb787e7aa8c041ea, type: 3}
+  - {fileID: 2800000, guid: 8b5d90a6ed426624295a6281226e1c36, type: 3}
+  - {fileID: 2800000, guid: 53b9dde910c212b4387ae7d515fd0696, type: 3}
+  - {fileID: 2800000, guid: 013775cb76158db4394e5f4f64c41060, type: 3}
+  - {fileID: 2800000, guid: 1502fd8c95a606e409f7ce954f1efe97, type: 3}
+  pointsPerCan: 10
+  canSize: {x: 180, y: 300}
+  columnStep: 135
+  rightInset: 155
+  bottomInset: 110
+  spreadResistance: 115
+  pileRise: 0.55
+  maxTilt: 55
+  flightDuration: 1.6
+  horizontalSpeed: {x: 180, y: 480}
+  upwardSpeed: {x: 250, y: 550}
+  gravity: 850
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
