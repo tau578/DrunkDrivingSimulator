@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
             larpValue += 0.1f;
             cam.transform.rotation = Quaternion.Euler(0f, 0f, Mathf.LerpAngle(camRot, 0f, Time.deltaTime));
         }
-        camRot = Mathf.Clamp(camRot, -20f, 20f);
+        camRot = Mathf.Clamp(camRot, -15f, 15f);
     }
     void OnTriggerEnter(Collider other)
     {
