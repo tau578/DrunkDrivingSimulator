@@ -183,7 +183,8 @@ public sealed class BeerCanStack : MonoBehaviour
     public void ScatterAndRestart()
     {
         if (!initialized) return;
-        SynchronizeScore();
+        // A crash only releases existing HUD objects. Do not award pending cans here.
+        progress.Restart(SpawnScript.points);
         for (int i = 0; i < stacked.Count; i++)
         {
             RawImage image = stacked[i];
@@ -199,7 +200,6 @@ public sealed class BeerCanStack : MonoBehaviour
             image.transform.SetAsLastSibling();
         }
         stacked.Clear();
-        progress.Restart(SpawnScript.points);
     }
 
     private void OnDestroy()
