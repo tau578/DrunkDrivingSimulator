@@ -25,6 +25,7 @@ public class PlayerHP : MonoBehaviour
         {
             SpawnScript.points += 20;
             StartCoroutine(BloodSplat());
+            Destroy(other.gameObject);
 
         }
     }
