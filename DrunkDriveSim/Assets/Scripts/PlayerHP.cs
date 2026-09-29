@@ -13,6 +13,8 @@ public class PlayerHP : MonoBehaviour
     public GameObject blood;
     public Animator anim;
 
+    public GameObject gameOverScreen;
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
@@ -35,6 +37,7 @@ public class PlayerHP : MonoBehaviour
         if (hp == 0)
         {
             Time.timeScale = 0;
+            gameOverScreen.SetActive(true);
         }
         if (hp == 3)
         {
