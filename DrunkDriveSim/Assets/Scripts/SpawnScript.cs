@@ -19,7 +19,7 @@ public class SpawnScript : MonoBehaviour
         playerSpeed = 4;
         obstacleCount = 0;
         points = 0;
-        StartCoroutine(Suicide(Random.Range(1f, 1.5f)));
+        StartCoroutine(Suicide(Random.Range(0.4f, 0.8f)));
         rend = rend.GetComponent<Renderer>();
     }
 
@@ -29,9 +29,9 @@ public class SpawnScript : MonoBehaviour
         rend.material.mainTextureOffset = new Vector2(Time.realtimeSinceStartup * -offset, 0f);
         points += Time.deltaTime;
         score.text = string.Format("{00}", points);
-        if (playerSpeed < 10)
+        if (playerSpeed < 50)
         {
-            playerSpeed += 0.01f;
+            playerSpeed += 0.08f;
             if (offset <= -1f)
             {
                 offset = 0;
@@ -50,7 +50,7 @@ public class SpawnScript : MonoBehaviour
             var position = new Vector3(Random.Range(-7, 7), -0.5f, 70);
             Instantiate(currentObstacle, position, transform.rotation);
             obstacleCount += 1;
-            StartCoroutine(Suicide(Random.Range(1f, 5f)));
+            StartCoroutine(Suicide(Random.Range(0.4f, 0.8f)));
         }
     }
 }

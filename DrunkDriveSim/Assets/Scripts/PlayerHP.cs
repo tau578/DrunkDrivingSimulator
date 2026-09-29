@@ -26,6 +26,7 @@ public class PlayerHP : MonoBehaviour
         if (other.CompareTag("Victim"))
         {
             SpawnScript.points += 20;
+            SpawnScript.obstacleCount -= 1;
             StartCoroutine(BloodSplat());
             Destroy(other.gameObject);
 
@@ -64,7 +65,7 @@ public class PlayerHP : MonoBehaviour
         Physics2D.IgnoreLayerCollision(0, 1, true);
         for (int i = 0; i < 3; i++)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
         }
         Physics2D.IgnoreLayerCollision(0, 1, false);
     }

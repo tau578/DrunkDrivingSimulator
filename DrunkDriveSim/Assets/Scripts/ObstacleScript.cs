@@ -13,7 +13,7 @@ public class ObstacleScript : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Trigger"))
+        if(other.CompareTag("Finish"))
         {
             SpawnScript.obstacleCount -= 1;
             Destroy(this.gameObject);
