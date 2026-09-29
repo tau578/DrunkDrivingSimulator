@@ -15,6 +15,7 @@ public class SpawnScript : MonoBehaviour
 
     void Awake()
     {
+        Time.timeScale = 1;
         maxObstacle = 20;
         playerSpeed = 4;
         obstacleCount = 0;

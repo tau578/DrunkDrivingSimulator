@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -8498215160962655763}
   - component: {fileID: 7686811653370282581}
   - component: {fileID: 1652460871503675410}
+  - component: {fileID: 3516078188456566389}
   m_Layer: 0
   m_Name: Obstacle 3
   m_TagString: Victim
@@ -156,3 +157,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &3516078188456566389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7966258860839407976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5282abbfe6f2ddf45a30cfb630b707e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wobble
+  wobbleSpeed: 5
+  wobbleAmount: 0.5
